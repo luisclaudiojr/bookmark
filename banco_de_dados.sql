@@ -1,56 +1,50 @@
-# ************************************************************
-# Sequel Pro SQL dump
-# Version 3408
-#
-# http://www.sequelpro.com/
-# http://code.google.com/p/sequel-pro/
-#
-# Host: 127.0.0.1 (MySQL 5.1.44)
-# Database: bookmarks
-# Generation Time: 2012-08-20 13:59:28 +0000
-# ************************************************************
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Servidor: 127.0.0.1
+-- Tempo de Geração: 
+-- Versão do Servidor: 5.5.27-log
+-- Versão do PHP: 5.4.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+--
+-- Banco de Dados: `bookmarks`
+--
 
-# Dump of table bookmark
-# ------------------------------------------------------------
+-- --------------------------------------------------------
 
-DROP TABLE IF EXISTS `bookmark`;
+--
+-- Estrutura da tabela `bookmark`
+--
 
-CREATE TABLE `bookmark` (
+CREATE TABLE IF NOT EXISTS `bookmark` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(250) NOT NULL DEFAULT '',
   `description` varchar(250) DEFAULT NULL,
   `url` varchar(250) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
-LOCK TABLES `bookmark` WRITE;
-/*!40000 ALTER TABLE `bookmark` DISABLE KEYS */;
+--
+-- Extraindo dados da tabela `bookmark`
+--
 
-INSERT INTO `bookmark` (`id`, `name`, `description`, `url`)
-VALUES
-	(1,'twitter','@ErkoBridee','https://twitter.com/ErkoBridee'),
-	(2,'github','github/erkobridee','https://github.com/erkobridee'),
-	(3,'site','site: Erko Bride','http://erkobridee.com'),
-	(4,'delicious','delicious/erko.bridee','http://www.delicious.com/erko.bridee');
+INSERT INTO `bookmark` (`id`, `name`, `description`, `url`) VALUES
+(7, 'Google', 'Busca do Google', 'https://www.google.com'),
+(8, 'Facebook', 'Acesso ao Facebook', 'https://fb.com'),
+(9, 'Slim Framework', 'Site do framework Slim utilizado.', 'http://www.slimframework.com/'),
+(11, 'IFC-Camboriu', 'Site do Instituto', 'http://www.camboriu.ifc.edu.br/'),
+(14, 'dbfrete', 'teste', 'http://www.dbfrete.com.br');
 
-/*!40000 ALTER TABLE `bookmark` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
